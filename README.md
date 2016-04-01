@@ -1,7 +1,6 @@
 # StormSecurityTest
 
-# 1. Escreva um breve algoritmo que retorne o ​resto ​da divisão (operação matemática) 
-de ​10​ por ​3 ​. Use a linguagem que você quiser. 
+# 1. Escreva um breve algoritmo que retorne o ​resto ​da divisão (operação matemática) de ​10​ por ​3 ​. Use a linguagem que você quiser. 
 
     def restOfDivision(n, m):
        return n % m;
@@ -25,4 +24,16 @@ a) Explique a diferença de funcionamento entre uma ​Pilha​ (Last In First O
     Para pilhas, acho interessante o exemplo do "git stash". Esse comando cria uma pilha de modificações que serão escondidas. Ao utilizar o comando git stash pop. Ele retorna o último item inserido na pilha. 
 
 
+# 3. Imagine a seguinte estrutura de dados que contém os seguintes campos: 
+ 
+    Classe ​Pessoa 
+         String nome; 
+         int idade; 
+    fim 
+ 
+# Você possui uma ordenada de objetos da classe ​Pessoa e um ​dicionário​, cuja chave é o ​nome da pessoa​.  
+ 
+#### Sendo estas estruturas de dados preenchidas com o nome de uma família (Maria, José e João), para buscar pela idade de João, podemos dizer que é mais rápido, computacionalmente, fazê­-lo em um dicionário​ do que numa ​lista. ​Por quê?
 
+    Quando selecionamos um determinado elemento em um dicionário. Ele possue uma busca baseada hash de strings para aquele elemento facilitando a indexação. Enquanto a lista percorrer sequencialmente todos os elementos anteriores ao número informado. O que à torna mais lenta quando trabalhamos com muitos elementos na coleção.
+    
