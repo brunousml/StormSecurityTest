@@ -2,10 +2,12 @@
 
 # 1. Escreva um breve algoritmo que retorne o ​resto ​da divisão (operação matemática) de ​10​ por ​3 ​. Use a linguagem que você quiser. 
 
+``` 
     def restOfDivision(n, m):
        return n % m;
 
     print restOfDivision(10, 3)
+``` 
 
 # 2. Algumas estruturas de dados são famosas, como a ​Pilha​, ​Fila​, ​Lista​, ​Dicionário​
  entre outras. 
@@ -26,10 +28,12 @@ a) Explique a diferença de funcionamento entre uma ​Pilha​ (Last In First O
 
 # 3. Imagine a seguinte estrutura de dados que contém os seguintes campos: 
  
+``` 
     Classe ​Pessoa 
          String nome; 
          int idade; 
     fim 
+``` 
  
 # Você possui uma ordenada de objetos da classe ​Pessoa e um ​dicionário​, cuja chave é o ​nome da pessoa​.  
  
