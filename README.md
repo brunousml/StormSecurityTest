@@ -93,19 +93,39 @@ fim
  
 Em um Prédio comercial, existem duas Empresas. Uma delas é a Storm Security e a outra é a Storm Defense. A Storm Security possui em seu quadro de Funcionários, Pessoas alocadas em diversos Departamentos. Um deles é o de Tecnologia e Informação (TI). No departamento de TI, você encontra alguns funcionários que são bastante flexíveis e dependendo da situação ou projeto, conseguem assumir um papel  de Desenvolvedor e Database Administrator (DBA) Outros funcionários são especialistas e desempenham um papel exclusivo de Desenvolvedor. 
 ```
-classe tiEmployment:
+class building{
    id
    name
-   ...
-fim
+}
 
-classe dev extends tiEmployment:
+class company{
+   id
+   name 
+   building_id
+}
+
+class department{
+   id
+   name
+   company_id
+}
+
+class employment{
+   id
+   name
+   department_id
+   ...
+}
+
+class dev extends employment{
+   employment_id
    skills
    ...
-fim
+}
 
-classe dba extends tiEmployment:
+class dba extends employment{
+   employment_id
    skills
    ..
-fim
+}
 ```
