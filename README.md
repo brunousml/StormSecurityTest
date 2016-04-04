@@ -130,3 +130,16 @@ class dba extends employment{
    ..
 }
 ```
+
+
+# 8 O conceito de Model­View­Controller (MVC) é um padrão de design amplamente conhecido e implementado em diversos frameworks. Diga o que você entende por MVC com suas palavras.
+
+O modelo MVC como o próprio nome diz, separa a arquitetura em 3 grandes camadas Modelo, Visão e Controlador. 
+
+O modelo tem por obrigação gerenciar toda a persistência de dados e interação com banco de dados. Conexões, querys, entre outras interações.
+
+No meio do caminho fica a camada de controle, que é o cerébro da aplicação. Nela inclui-mos as regras de negócio. para que ele possa acionar o modelo, recuperar os dados, e digerir antes de retornar a camada de visualização.
+
+Por fim a camada de visualização esta encarregada de exibir os dados retornados pelo controlador para o cliente.
+
+
