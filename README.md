@@ -41,7 +41,9 @@ _Você possui uma ordenada de objetos da classe ​Pessoa e um ​dicionário​
     
 # 4. Dados os dois algoritmos (​maior_numero ​ e ​meu_algoritmo ​) diga: 
  _(a) Qual a ​complexidade de tempo de execução ​(ex: O[log n], O[n!] ...)_
+ 
  _(b) Desenhe sua ​curva de crescimento assintótico​ (tempo de execução x tamanho da entrada)._ 
+ 
  _(c) O vetor ​números​, possui o mesmo tamanho ​N, ​ na chamada de ambas as funções, qual delas terminará primeiro?_
 
 ```python
@@ -66,4 +68,17 @@ função meu_algoritmo(vetor numeros)
  
      retorna soma; 
 fim 
+```
+# 5. Escreva um algoritmo qualquer para inverter uma String recebida como parâmetro. Use pseudo código ou a linguagem que você quiser. Não use funções prontas. 
+
+```
+função inverterString(str):
+   stringInvertida = '';
+   para letra em str faça:
+      stringInvertida = letra + stringInvertida
+   fim
+   
+   retornar stringInvertida
+fim
+
 ```
