@@ -69,7 +69,9 @@ função meu_algoritmo(vetor numeros)
      retorna soma; 
 fim 
 ```
-# 5. Escreva um algoritmo qualquer para inverter uma String recebida como parâmetro. Use pseudo código ou a linguagem que você quiser. Não use funções prontas. 
+
+
+### 5. Escreva um algoritmo qualquer para inverter uma String recebida como parâmetro. Use pseudo código ou a linguagem que você quiser. Não use funções prontas. 
 
 ```
 função inverterString(str):
@@ -82,3 +84,8 @@ função inverterString(str):
 fim
 
 ```
+
+
+### 6 Em um projeto de um aplicativo, existe uma classe chamada GoogleAnalytics, cuja função é enviar marcações (ex:eventos, screen views, etc) para a ferramenta de analytics do Google. Esta classe é utilizada em muitos pontos diferentes do projeto. A cada instanciação da GoogleAnalytics, é feito um setup que envolve uma série de atividades e que só deveriam acontecer uma única vez. Você foi encarregado de implementar esta classe. Que solução de design  você daria para garantir que a instanciação da GoogleAnalytics, ocorra apenas uma única vez, ao longo de toda execução do aplicativo? 
+
+   Acredito que para este caso o padrão de projetos "Singleton" oferece o necessário para atender este requisito.
