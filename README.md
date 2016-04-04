@@ -88,3 +88,24 @@ fim
 ### 6 Em um projeto de um aplicativo, existe uma classe chamada GoogleAnalytics, cuja função é enviar marcações (ex:eventos, screen views, etc) para a ferramenta de analytics do Google. Esta classe é utilizada em muitos pontos diferentes do projeto. A cada instanciação da GoogleAnalytics, é feito um setup que envolve uma série de atividades e que só deveriam acontecer uma única vez. Você foi encarregado de implementar esta classe. Que solução de design  você daria para garantir que a instanciação da GoogleAnalytics, ocorra apenas uma única vez, ao longo de toda execução do aplicativo? 
 
    Acredito que para este caso o padrão de projetos "Singleton" oferece o necessário para atender este requisito.
+
+# 7 Usando os conceitos de orientação a objetos, dê sua sugestão para um modelo que expresse os conceitos destacados em negrito e seus relacionamentos: 
+ 
+Em um Prédio comercial, existem duas Empresas. Uma delas é a Storm Security e a outra é a Storm Defense. A Storm Security possui em seu quadro de Funcionários, Pessoas alocadas em diversos Departamentos. Um deles é o de Tecnologia e Informação (TI). No departamento de TI, você encontra alguns funcionários que são bastante flexíveis e dependendo da situação ou projeto, conseguem assumir um papel  de Desenvolvedor e Database Administrator (DBA) Outros funcionários são especialistas e desempenham um papel exclusivo de Desenvolvedor. 
+```
+classe tiEmployment:
+   id
+   name
+   ...
+fim
+
+classe dev extends tiEmployment:
+   skills
+   ...
+fim
+
+classe dba extends tiEmployment:
+   skills
+   ..
+fim
+```
