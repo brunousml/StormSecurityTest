@@ -132,7 +132,7 @@ class dba extends employment{
 ```
 
 
-# 8 O conceito de Model­View­Controller (MVC) é um padrão de design amplamente conhecido e implementado em diversos frameworks. Diga o que você entende por MVC com suas palavras.
+### 8 O conceito de Model­View­Controller (MVC) é um padrão de design amplamente conhecido e implementado em diversos frameworks. Diga o que você entende por MVC com suas palavras.
 
 O modelo MVC como o próprio nome diz, separa a arquitetura em 3 grandes camadas Modelo, Visão e Controlador. 
 
@@ -142,4 +142,13 @@ No meio do caminho fica a camada de controle, que é o cerébro da aplicação. 
 
 Por fim a camada de visualização esta encarregada de exibir os dados retornados pelo controlador para o cliente.
 
+### 9 No desenvolvimento de aplicativos, é comum a necessidade de consumo de Web Services, para fazer o download/envio de dados úteis para aplicação. Em uma empresa de TI, o desenvolvimento do app e do backend, onde fica a implementação dos serviços, fica sob responsabilidade de pessoas diferentes e que trabalham em ritmos diferentes. Um cenário comum, é a necessidade de uso do serviços para avançar na codificação do app, porém, nem sempre eles se encontram prontos para tal.  
+_O que você faria para contornar esta situação e avançar no desenvolvimento do app, tentando diminuir essa dependência do desenvolvedor de backend?_
 
+Penso em 2 saídas para essa situação:
+
+Primeiro: Podemos definir as URLs e os dados que elas retornarão. Assim podemos criar as rotas retornando dados estáticos, de acordo com o que o front necessita naquele momento. Ao final da implementação de backend, podemos trocar o retorno estático pelo retorno da aplicação de backend. 
+
+Segundo: Com a utilização de aplicação como firebase, podemos criar uma banco de dados para desenvolvimento, baseado em webservice. Isso retornará os dados que o front precisa para continuar o seu trabalho. 
+
+O importante nestes exemplos, é que definindo um padrão de URLs e dados, podemos trabalhar em paralelo, diminuindo a dependência de Frontend e Backend durante o desenvolvimento de aplicações.
