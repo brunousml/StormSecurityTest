@@ -13,20 +13,25 @@ https://github.com/brunousml/StormSecurityTest/blob/feature/fourQuestion/Questio
 ### 2. Algumas estruturas de dados são famosas, como a Pilha, Fila, Lista, Dicionário entre outras.
 _a) Explique a diferença de funcionamento entre uma Pilha (Last In First Out) e uma Fila (First In First Out)._
 
-Dada a Fila [1,2,3], vou adicionar 5 a esta fila e teremos [1,2,3,5]. Ao recuperar esse valr
 
+Em resumo, a fila usa a ordem de iserção para remover os itens adicionados.
+Ou seja, ao remover um item da fila ela remove o primeiro item adicionado.
+Enquanto que a pilha removerá o último item adicionado a pilha.
 
-Em resumo, a fila usa a ordem de iserção para remover os itens adicionados. Ou seja, ao remover um item da fila ela remove o primeiro item adicionado. Enquanto que a pilha removerá o último a item adicionado
-
-Na prática funciona da seguinte forma. Dada a seguinte fila [1, 2, 3]. Ao remover um item da fila, sobrará apenas [2,3]. Ou seja, o primeiro item adicionado foi removido.
-Enquanto em uma pilha o comportamento é inverso. Dada uma pilha [1, 2, 3], ao remover um item, ela retornará [1,2] removendo o último item adicionado a lista.
+Na prática funciona da seguinte forma: Dada a seguinte fila [1, 2, 3]. Ao remover um item da fila, sobrará apenas [2,3].
+Ou seja, o primeiro item adicionado foi removido.
+Enquanto em uma pilha o comportamento é inverso. Dada uma pilha [1, 2, 3], ao remover um item, ela retornará [1,2]
+removendo o último item adicionado a lista.
 
 
 _(b) Dê 1 exemplo do mundo real, com o que você poderia representar, para ​cada​ uma destas estruturas._
 
-    Para o envio de emails é legal utilizar filas. Quando temos uma demanda de envio de email maior que a capacidade de envio de nossos servidores. Podemos usar uma fila para gerenciar a sequencia de envio. Pois sempre serão enviados os emails de acordo com a sequencia que foram inseridos. Respeitando assim a fila.
+Filas funcionam muito bem para o envio de emails. Quando temos uma demanda de envio de email maior que a capacidade de
+envio de nossos servidores. Podemos usar uma fila para gerenciar a sequencia de envio. Pois sempre serão enviados os
+emails de acordo com a sequencia que foram inseridos. Respeitando assim a fila.
 
-Para pilhas, acho interessante o exemplo do "git stash". Esse comando cria uma pilha de modificações que serão escondidas. Ao utilizar o comando git stash pop. Ele retorna o último item inserido na pilha.
+Para pilhas, acho interessante o exemplo do "git stash". Esse comando cria uma pilha de modificações que serão
+"escondidas". Ao utilizar o comando git stash pop. Ele retorna o último item inserido na pilha.
 
 
 ### 3. Imagine a seguinte estrutura de dados que contém os seguintes campos:
@@ -122,13 +127,13 @@ class employment{
    ...
 }
 
-class dev extends employment{
+class dev{
    employment_id
    skills
    ...
 }
 
-class dba extends employment{
+class dba{
    employment_id
    skills
    ..
@@ -140,20 +145,24 @@ class dba extends employment{
 
 O modelo MVC como o próprio nome diz, separa a arquitetura em 3 grandes camadas Modelo, Visão e Controlador.
 
-O modelo tem por obrigação gerenciar toda a persistência de dados e interação com banco de dados. Conexões, querys, entre outras interações.
+O modelo tem por obrigação gerenciar toda a persistência de dados e interação com banco de dados. Conexões, querys,
+entre outras interações.
 
-No meio do caminho fica a camada de controle, que é o cerébro da aplicação. Nela inclui-mos as regras de negócio. para que ele possa acionar o modelo, recuperar os dados, e digerir antes de retornar a camada de visualização.
+No meio do caminho fica a camada de controle, que é o cerébro da aplicação. Nela incluímos as regras de negócio. para
+que ele possa acionar o modelo, recuperar os dados, e digerir os dados antes de retornar para a camada de visualização.
 
 Por fim a camada de visualização esta encarregada de exibir os dados retornados pelo controlador para o cliente.
 
 ### 9 No desenvolvimento de aplicativos, é comum a necessidade de consumo de Web Services, para fazer o download/envio de dados úteis para aplicação. Em uma empresa de TI, o desenvolvimento do app e do backend, onde fica a implementação dos serviços, fica sob responsabilidade de pessoas diferentes e que trabalham em ritmos diferentes. Um cenário comum, é a necessidade de uso do serviços para avançar na codificação do app, porém, nem sempre eles se encontram prontos para tal.
 _O que você faria para contornar esta situação e avançar no desenvolvimento do app, tentando diminuir essa dependência do desenvolvedor de backend?_
 
-Penso em 2 saídas para essa situação:
+Podemos definir as URLs e os dados que elas retornarão. Com isso podemos:
 
-Primeiro: Podemos definir as URLs e os dados que elas retornarão. Assim podemos criar as rotas retornando dados estáticos, de acordo com o que o front necessita naquele momento. Ao final da implementação de backend, podemos trocar o retorno estático pelo retorno da aplicação de backend.
+Primeiro: Criar as rotas retornando dados estáticos, de acordo com o que o front necessita naquele momento. Ao final da
+ implementação de backend, podemos trocar o retorno estático pelo retorno da aplicação de backend.
 
-Segundo: Com a utilização de aplicação como firebase, podemos criar uma banco de dados para desenvolvimento, baseado em webservice. Isso retornará os dados que o front precisa para continuar o seu trabalho.
+Segundo: Com a utilização de aplicação como firebase, podemos criar uma banco de dados para desenvolvimento, baseado em
+acessando a API deles para recuperar os dados necessários. Isso retornará os dados que o front precisa para continuar o seu trabalho.
 
 O importante nestes exemplos, é que definindo um padrão de URLs e dados, podemos trabalhar em paralelo, diminuindo a dependência de Frontend e Backend durante o desenvolvimento de aplicações.
 
