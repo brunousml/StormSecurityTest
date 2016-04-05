@@ -8,9 +8,13 @@ def restOfDivision(n, m):
 
 print restOfDivision(10, 3)
 ``` 
+https://github.com/brunousml/StormSecurityTest/blob/feature/fourQuestion/Question_1.py 
 
 ### 2. Algumas estruturas de dados são famosas, como a Pilha, Fila, Lista, Dicionário entre outras. 
-_a) Explique a diferença de funcionamento entre uma ​Pilha​ (Last In First Out) e uma ​Fila​ (First In First Out)._
+_a) Explique a diferença de funcionamento entre uma Pilha (Last In First Out) e uma Fila (First In First Out)._
+
+Dada a Fila [1,2,3], vou adicionar 5 a esta fila e teremos [1,2,3,5]. Ao recuperar esse valr
+
 
 Em resumo, a fila usa a ordem de iserção para remover os itens adicionados. Ou seja, ao remover um item da fila ela remove o primeiro item adicionado. Enquanto que a pilha removerá o último a item adicionado
 
