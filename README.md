@@ -152,3 +152,10 @@ Primeiro: Podemos definir as URLs e os dados que elas retornarão. Assim podemos
 Segundo: Com a utilização de aplicação como firebase, podemos criar uma banco de dados para desenvolvimento, baseado em webservice. Isso retornará os dados que o front precisa para continuar o seu trabalho. 
 
 O importante nestes exemplos, é que definindo um padrão de URLs e dados, podemos trabalhar em paralelo, diminuindo a dependência de Frontend e Backend durante o desenvolvimento de aplicações.
+
+### 10 Durante o desenvolvimento de um app, chegou­se a uma versão para release após aprovação do setor de Qualidade (QA). As últimas modificações no código foram devidamente commitadas e enviadas para o repositório da empresa. A branch master, recebeu um merge da branch dev e criou-se uma tag v1.0 para marcar esta etapa do projeto. Após a entrega, o cliente demandou novas funcionalidades que começaram a ser implementadas na branch dev. Porém, detectou­se um bug na versão 1.0 que estava em produção. Deve­se lançar um bugfix urgente. O que você faria, quais os procedimentos (não precisa ser comandos em git) para contornar esta situação?
+
+Devemos criar uma branch a partir da master, no caso, especificamente da tag v1.0. Uma boa prática é utilizar o prefixo BUGFIX.
+Implementamos a correção. Bug resolvido. Fazemos um merge desta branch com a master e dev. 
+Ao final devemos criar uma tag v1.1. Marcando assim a correção do bug como 'feito'.
+
