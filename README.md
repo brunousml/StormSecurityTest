@@ -47,12 +47,14 @@ _Você possui uma ordenada de objetos da classe ​Pessoa e um ​dicionário​
 
 Quando selecionamos um determinado elemento em um dicionário. Ele possue uma busca baseada hash de strings para aquele elemento facilitando a indexação. Enquanto a lista percorrer sequencialmente todos os elementos anteriores ao número informado. O que à torna mais lenta quando trabalhamos com muitos elementos na coleção.
 
-# 4. Dados os dois algoritmos (​maior_numero ​ e ​meu_algoritmo ​) diga:
- _(a) Qual a ​complexidade de tempo de execução ​(ex: O[log n], O[n!] ...)_
+# 4. Dados os dois algoritmos (maior_numero e meu_algoritmo) diga:
+ _(a) Qual a complexidade de tempo de execução (ex: O[log n], O[n!] ...)_
 
- _(b) Desenhe sua ​curva de crescimento assintótico​ (tempo de execução x tamanho da entrada)._
+ _(b) Desenhe sua curva de crescimento assintótico (tempo de execução x tamanho da entrada)_
 
  _(c) O vetor ​números​, possui o mesmo tamanho ​N, ​ na chamada de ambas as funções, qual delas terminará primeiro?_
+
+A função "maior_numero()" terá um tempo de execução menor do que a seguda por conter um laço a mais que a primeira. 
 
 ```python
 função maior_numero(vetor números)
