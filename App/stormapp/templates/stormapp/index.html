@@ -10,7 +10,10 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Starter Template for Bootstrap</title>
+    <title>Storm Security - Teste Python</title>
+
+    <!-- custom css -->
+    <link href="{% static "stormapp/app.css" %}" rel="stylesheet">
 
     <!-- Bootstrap core CSS -->
     <link href="{% static "stormapp/bootstrap/dist/css/bootstrap.min.css" %}" rel="stylesheet">
@@ -43,7 +46,9 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Home</a>
+          <a class="navbar-brand" href="#">
+            <img src="{% static "stormapp/img/home-48.png" %}" />
+          </a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
         </div><!--/.nav-collapse -->
@@ -51,7 +56,16 @@
     </nav>
 
     <div class="container">
-      <h1>Listagem de filmes</h1>
+      <header>
+        <h1>Listagem de filmes</h1>
+
+        <div class="movie">
+          <a href="{% url "filme/fime_id" %}">
+            <img src="{% static %}">
+          </a>
+        </div>
+        
+      </header>
     </div><!-- /.container -->
 
 
