@@ -1,9 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from stormapp.models import Movie
 
 def index(request):
-	context = {}
+	movies = Movie.objects.order_by('created_at')
+	context = {'movies': movies}
 	return render(request, 'stormapp/index.html', context)
 
 

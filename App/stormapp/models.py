@@ -10,7 +10,7 @@ class Movie(models.Model):
 	title = models.CharField(max_length=200)
 	sinopse = models.TextField(max_length=800)
 	created_at = models.DateTimeField(auto_now_add=True)
-	picture = models.ImageField(upload_to='stormapp/static/stormapp/movie_pictures', blank=True, null=True)
+	picture = models.ImageField(upload_to='static/stormapp/movie_pictures', blank=True, null=True)
 
 	def __str__(self):
 		return self.title
