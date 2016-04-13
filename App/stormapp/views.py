@@ -3,13 +3,21 @@ from django.http import HttpResponse
 from stormapp.models import Movie
 
 def index(request):
-	movies = Movie.objects.order_by('created_at')
-	context = {'movies': movies}
+	movies = Movie.objects.order_by('title')
+	context = {
+		'header_content': 'Listagem de filmes',
+		'movies': movies,
+	}
 	return render(request, 'stormapp/index.html', context)
 
 
-def movie(request, movie_title):
-	return HttpResponse("Filme Selected:  %s" % movie_title)
+def movie(request, slug):
+	movie = Movie.objects.get(slug=slug)
+	context = {
+		'header_content': movie.title,
+		'movie': movie,
+	}
+	return render(request, 'stormapp/movie.html', context)
 
 
 def order_by_gender(request, gender_name):
