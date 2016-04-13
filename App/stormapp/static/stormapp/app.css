@@ -47,3 +47,7 @@ header{
 .container img{
 	margin-top: -12px;
 }
+
+ul{
+	margin-left:-40px;
+}

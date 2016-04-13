@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.db.models import Q
 from stormapp.models import Movie
 
 def index(request):
@@ -17,7 +18,8 @@ def movie(request, slug):
 	genders = movie.genders.all()
 	genders_str =', '.join([g.name for g in genders])
 	actors_str =', '.join([g.name for g in actors])
-	related_filmes = Movie.objects.filter(actors=actors, genders=genders)
+	related_filmes = Movie.objects.filter(Q(genders=genders) | Q(actors=actors)).exclude(id=movie.id).distinct()
+	# related_filmes = related_filmes.exclude(id=movie.id)
 	context = {
 		'header_content': movie.title,
 		'movie': movie,
