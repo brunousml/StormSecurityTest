@@ -4,6 +4,7 @@ h1{
 
 header{
 	border-bottom: solid #cfcfcf ;
+	margin-bottom: 
 }
 
 .container img{
@@ -22,4 +23,19 @@ header{
 	float: left;
 	padding: 20px 20px 20px 0; 
 	list-style: none;
+}
+
+#movie-picture{
+	float: left;
+	width: 280px;
+}
+
+#movie-picture img{
+	max-width: 250px;
+}
+
+#movie-info{
+	float: left;
+	width: 60%;
+	margin-top: -35px;
 }

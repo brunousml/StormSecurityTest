@@ -1,6 +1,25 @@
 {% extends "stormapp/base.html" %}
 
 {% block content %}
+<div id="movie-picture">
 	<img src="/{{movie.picture}}" >
+</div>
+
+<div id="movie-info">
+	<div class="movie-label">
+		<h3>Sinopse:</h3>
+		<p>{{movie.sinopse}}</p>
+	<div>
+
+	<div class="movie-label">
+		<h3>Genero:</h3>
+		<p>{{movie.title}}</p>
+	<div>
+
+	<div class="movie-label">
+		<h3>Atores:</h3>
+		<p>{{movie.title}}</p>
+	<div>
+</div>
 
 {% endblock %}
