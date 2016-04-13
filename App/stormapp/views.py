@@ -13,9 +13,17 @@ def index(request):
 
 def movie(request, slug):
 	movie = Movie.objects.get(slug=slug)
+	actors = movie.actors.all()
+	genders = movie.genders.all()
+	genders_str =', '.join([g.name for g in genders])
+	actors_str =', '.join([g.name for g in actors])
+	related_filmes = Movie.objects.filter(actors=actors, genders=genders)
 	context = {
 		'header_content': movie.title,
 		'movie': movie,
+		'genders': genders_str,
+		'actors': actors_str,
+		'related_filmes': related_filmes,
 	}
 	return render(request, 'stormapp/movie.html', context)
 

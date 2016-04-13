@@ -7,16 +7,9 @@ header{
 	margin-bottom: 
 }
 
-.container img{
-	margin-top: -12px;
-}
-
-.movie{
-
-}
-
 #content{
 	margin-top: 25px;
+	min-height: 400px;
 }
 
 #content li{
@@ -25,17 +18,32 @@ header{
 	list-style: none;
 }
 
-#movie-picture{
+#related-filmes{
+	margin-top: 30px
+}
+
+.movie-info{
+	float: left;
+}
+
+.clear{
+	clear: both;
+}
+.movie-picture{
 	float: left;
 	width: 280px;
 }
 
-#movie-picture img{
+.movie-picture img{
 	max-width: 250px;
 }
 
-#movie-info{
+.movie-sinopse{
 	float: left;
 	width: 60%;
-	margin-top: -35px;
+
+}
+
+.container img{
+	margin-top: -12px;
 }

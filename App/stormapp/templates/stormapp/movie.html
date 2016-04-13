@@ -1,25 +1,43 @@
 {% extends "stormapp/base.html" %}
 
 {% block content %}
-<div id="movie-picture">
-	<img src="/{{movie.picture}}" >
+
+
+<div class="movie-info">
+	<div class="movie-picture">
+		<img src="/{{movie.picture}}" >
+	</div>
+	<div class="movie-sinopse">
+		<div class="movie-label">
+			<h3>Sinopse:</h3>
+			<p>{{movie.sinopse}}</p>
+		</div>
+		<div class="movie-label">
+			<h3>Genero:</h3>
+			<p>{{genders}}</p>
+		</div>
+		<div class="movie-label">
+			<h3>Atores:</h3>
+			<p>{{actors}}</p>
+		</div>
+	</div>	
 </div>
+<div class="clear"></div>
+<div id="related-filmes">
+	<header>
+		<h1>Filmes Relacionados</h1>   
+    </header>
 
-<div id="movie-info">
-	<div class="movie-label">
-		<h3>Sinopse:</h3>
-		<p>{{movie.sinopse}}</p>
-	<div>
-
-	<div class="movie-label">
-		<h3>Genero:</h3>
-		<p>{{movie.title}}</p>
-	<div>
-
-	<div class="movie-label">
-		<h3>Atores:</h3>
-		<p>{{movie.title}}</p>
-	<div>
+	{% if related_filmes %}
+	  	<ul>
+	    {% for movie in related_filmes %}
+	        <li>
+	        	<a href="{% url 'movie' movie.slug %}">
+		          <img src="/{{movie.picture}}" width="200">
+		        </a>
+	        </li>
+	    {% endfor %}
+	    </ul>
+	{% endif %}
 </div>
-
 {% endblock %}
