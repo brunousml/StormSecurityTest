@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-def restOfDivision(n, m):
+def rest_of_division(n, m):
     return n % m;
 
-print restOfDivision(10, 3)
+print rest_of_division(10, 3)

@@ -1,13 +1,12 @@
 {% extends "stormapp/base.html" %}
 
 {% block content %}
-
   {% if movies %}
   	<ul>
     {% for movie in movies %}
         <li>
-        <a href="{% url 'movie' movie.slug %}">
-          <img src="{{movie.picture}}" width="200">
+          <a href="{% url 'movie' movie.slug %}">
+            <img src="/{{movie.picture}}" width="200">
           </a>
         </li>
     {% endfor %}

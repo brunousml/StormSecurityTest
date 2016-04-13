@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.db.models import Q
-from stormapp.models import Movie
+from stormapp.models import Movie, Gender
 
 def index(request):
 	movies = Movie.objects.order_by('title')
@@ -19,7 +19,6 @@ def movie(request, slug):
 	genders_str =', '.join([g.name for g in genders])
 	actors_str =', '.join([g.name for g in actors])
 	related_filmes = Movie.objects.filter(Q(genders=genders) | Q(actors=actors)).exclude(id=movie.id).distinct()
-	# related_filmes = related_filmes.exclude(id=movie.id)
 	context = {
 		'header_content': movie.title,
 		'movie': movie,
@@ -31,8 +30,14 @@ def movie(request, slug):
 
 
 def order_by_gender(request, gender_name):
-	return HttpResponse("Gender Page: %s" % gender_name)
-
+	gender = Gender.objects.filter(name=gender_name)
+	movies = Movie.objects.filter(genders=gender)
+	context = {
+		'header_content': gender_name,
+		'movies': movies,
+		'gender': gender
+	}
+	return render(request, 'stormapp/index.html', context)
 
 def order_by_actor(request, actor_name):
 	return HttpResponse("actor Page:  %s " % actor_name)
