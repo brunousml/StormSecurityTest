@@ -1,0 +1,53 @@
+h1{
+	color: #7e7575 !important;
+}
+
+header{
+	border-bottom: solid #cfcfcf ;
+	margin-bottom: 
+}
+
+#content{
+	margin-top: 25px;
+	min-height: 400px;
+}
+
+#content li{
+	float: left;
+	padding: 20px 20px 20px 0; 
+	list-style: none;
+}
+
+#related-filmes{
+	margin-top: 30px
+}
+
+.movie-info{
+	float: left;
+}
+
+.clear{
+	clear: both;
+}
+.movie-picture{
+	float: left;
+	width: 280px;
+}
+
+.movie-picture img{
+	max-width: 250px;
+}
+
+.movie-sinopse{
+	float: left;
+	width: 60%;
+
+}
+
+.container img{
+	margin-top: -12px;
+}
+
+ul{
+	margin-left:-40px;
+}
