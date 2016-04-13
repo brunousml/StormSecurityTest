@@ -29,15 +29,27 @@ def movie(request, slug):
 	return render(request, 'stormapp/movie.html', context)
 
 
-def order_by_gender(request, gender_name):
-	gender = Gender.objects.filter(name=gender_name)
+def order_by_gender(request, slug):
+	gender_obj = Gender.objects.filter(slug=slug)
+	for gender in gender_obj:
+		gender = gender
 	movies = Movie.objects.filter(genders=gender)
 	context = {
-		'header_content': gender_name,
+		'header_content': gender.name,
 		'movies': movies,
-		'gender': gender
+	}
+
+	return render(request, 'stormapp/index.html', context)
+
+def order_by_actor(request, slug):
+	actor = Gender.objects.filter(slug=slug)
+	movies = Movie.objects.filter(actors=actor)
+	context = {
+		'header_content': actor.name,
+		'movies': movies,
 	}
 	return render(request, 'stormapp/index.html', context)
 
-def order_by_actor(request, actor_name):
-	return HttpResponse("actor Page:  %s " % actor_name)
+
+
+# import pdb; pdb.set_trace()
