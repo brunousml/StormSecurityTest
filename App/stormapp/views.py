@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from django.db.models import Q
-from stormapp.models import Movie
+from stormapp.models import Movie, Gender, Actor
 
 def index(request):
 	movies = Movie.objects.order_by('title')
@@ -19,7 +19,6 @@ def movie(request, slug):
 	genders_str =', '.join([g.name for g in genders])
 	actors_str =', '.join([g.name for g in actors])
 	related_filmes = Movie.objects.filter(Q(genders=genders) | Q(actors=actors)).exclude(id=movie.id).distinct()
-	# related_filmes = related_filmes.exclude(id=movie.id)
 	context = {
 		'header_content': movie.title,
 		'movie': movie,
@@ -30,9 +29,39 @@ def movie(request, slug):
 	return render(request, 'stormapp/movie.html', context)
 
 
-def order_by_gender(request, gender_name):
-	return HttpResponse("Gender Page: %s" % gender_name)
+def order_by_gender(request, slug):	
+	gender_list = Gender.objects.filter(slug=slug)
+	movies = Movie.objects.filter(genders=gender_list)
+	# import pdb; pdb.set_trace()
+
+	if gender_list.count() == 0:
+		raise Http404("Genero nao encontrado")
+		
+	for gender in gender_list:
+		header_content = gender.name
+
+	context = {
+		'header_content': header_content,
+		'movies': movies,
+	}
+
+	return render(request, 'stormapp/index.html', context)
+
+def order_by_actor(request, slug):
+	actor_list = Actor.objects.filter(slug=slug)
+	movies = Movie.objects.filter(actors=actor_list)
+	
+	if actor_list.count() == 0:
+		raise Http404("Ator(a) nao encontrado")
+	
+	for actor in actor_list:
+		header_content = actor.name
+
+	context = {
+		'header_content': header_content,
+		'movies': movies,
+	}
+	return render(request, 'stormapp/index.html', context)
 
 
-def order_by_actor(request, actor_name):
-	return HttpResponse("actor Page:  %s " % actor_name)
+
