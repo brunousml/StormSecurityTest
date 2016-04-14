@@ -3,10 +3,10 @@
 ### 1. Escreva um breve algoritmo que retorne o ​resto ​da divisão (operação matemática) de ​10​ por ​3 ​. Use a linguagem que você quiser.
 
 ``` python
-def restOfDivision(n, m):
+def rest_of_division(n, m):
    return n % m;
 
-print restOfDivision(10, 3)
+print rest_of_division(10, 3)
 ```
 https://github.com/brunousml/StormSecurityTest/blob/feature/fourQuestion/Question_1.py
 
